@@ -8,7 +8,7 @@ const Map = dynamic(() => import('@/components/map'), {
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative h-screen w-screen overflow-hidden">
       <Map center={[28.6139, 77.2090]} zoom={12} />
     </main>
   )
