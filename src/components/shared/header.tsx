@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 
 import { APP_NAME } from '@/lib/constants'
 import { cn } from '@/lib/utils'
+import { Logo } from './logo'
 
 // ─── Types ──────────────────────────────────────────────────────────────────
 
@@ -72,9 +73,9 @@ export function Header({
       <div
         className={cn(
           'flex items-center gap-8 px-6 py-4',
-          'bg-white/75 dark:bg-neutral-900/75',
+          'bg-white/75',
           'backdrop-blur-2xl backdrop-saturate-150',
-          'border-2 border-black/40',
+          'border-2 border-black',
           'rounded-2xl',
           'shadow-[0_10px_40px_rgba(0,0,0,0.4)]',
           'transition-all duration-300',
@@ -82,12 +83,7 @@ export function Header({
       >
         {/* ── Logo ──────────────────────────────────────────────────── */}
         <div className="flex items-center gap-2 shrink-0 select-none cursor-default group">
-          <div className="relative flex items-center justify-center size-8 rounded-xl bg-linear-to-br from-violet-500 to-indigo-600 shadow-md shadow-violet-500/25 group-hover:shadow-violet-500/40 transition-shadow duration-300">
-            <MapPin className="size-4.5 text-white" strokeWidth={2.5} />
-          </div>
-          <span className="text-[15px] font-bold tracking-tight text-foreground hidden sm:inline">
-            {APP_NAME}
-          </span>
+          <Logo />
         </div>
 
         {/* ── Search ────────────────────────────────────────────────── */}
@@ -135,7 +131,7 @@ export function Header({
                     'text-[13px] leading-snug text-foreground',
                     'hover:bg-violet-50/60 dark:hover:bg-white/5',
                     'transition-colors duration-150',
-                    'border-b border-neutral-100/50 dark:border-white/5 last:border-b-0',
+                    'border-b border-neutral-100/50 last:border-b-0',
                   )}
                 >
                   <MapPin className="w-3.5 h-3.5 text-violet-500 mt-0.5 shrink-0" />
@@ -149,7 +145,7 @@ export function Header({
         {/* ── Theme Selector ────────────────────────────────────────── */}
         <div className="relative shrink-0" ref={themeRef}>
           <Button
-            variant="outline"
+            variant="destructive"
             size="lg"
             onClick={() => setThemeOpen((prev) => !prev)}
           >
