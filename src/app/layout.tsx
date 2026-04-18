@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Geist } from "next/font/google";
+import { Geist, Outfit } from "next/font/google";
 import { APP_NAME } from "@/lib/constants";
 import "./globals.css";
 import { cn } from "@/lib/utils";

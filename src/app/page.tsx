@@ -1,7 +1,7 @@
-import dynamic from "next/dynamic";
 import { LoaderIcon } from "lucide-react";
+import dynamic from "next/dynamic";
 
-const Map = dynamic(() => import("@/components/map"), {
+const MapComp = dynamic(() => import("@/components/map"), {
   ssr: true,
   loading: () => <LoaderIcon className="animate-spin" />,
 });
@@ -9,7 +9,7 @@ const Map = dynamic(() => import("@/components/map"), {
 export default function Home() {
   return (
     <main className="relative h-screen w-screen overflow-hidden">
-      <Map center={[28.6139, 77.209]} zoom={12} />
+      <MapComp center={[28.6139, 77.209]} zoom={12} />
     </main>
   );
 }

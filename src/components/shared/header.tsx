@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
 import {
   MapPin,
   ChevronDown,
@@ -8,12 +7,12 @@ import {
   SearchIcon,
   Loader2Icon,
 } from "lucide-react";
-import { Input } from "@/components/ui/input";
+import { useState, useRef, useEffect } from "react";
+import { Logo } from "@/components/shared/logo";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
-import { APP_NAME } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { Logo } from "./logo";
 
 // ─── Types ──────────────────────────────────────────────────────────────────
 

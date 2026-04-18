@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "leaflet/dist/leaflet.css";
 import type { Map as LeafletMap } from "leaflet";
 import { Header } from "@/components/shared/header";
@@ -139,7 +139,7 @@ export default function Map({
         markerRef.current = null;
       }
     };
-  }, []);
+  }, [center, zoom]);
 
   // ── Theme switching ───────────────────────────────────────────────────────
 
