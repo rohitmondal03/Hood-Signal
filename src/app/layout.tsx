@@ -4,13 +4,13 @@ import { APP_NAME } from "@/lib/constants";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const outfitFont = Outfit({
   variable: "--font-outfit",
   weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
-})
+});
 
 export const metadata: Metadata = {
   title: APP_NAME,
@@ -27,9 +27,7 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full", outfitFont.variable, "font-sans", geist.variable)}
     >
-      <body className="min-h-full flex flex-col">
-        {children}
-      </body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
